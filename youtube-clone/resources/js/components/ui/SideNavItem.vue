@@ -2,7 +2,7 @@
     <li 
         :class="[!openSideNav ? 'p-2' : 'flex items-center p-2']"
         class="text-white text-sm font-semibold text-center hover:bg-gray-700 rounded-lg cursor-pointer">
-        <div :class="[!openSideNav ? 'w-full flex justify-center' : '']">
+        <div :class="[!openSideNav ? 'w-full flex justify-center' : ' ']">
             <component :is="icon"/>
         </div>
         <div :class="[!openSideNav ? '' : 'mt-1 ml-4']">
@@ -20,7 +20,7 @@ import ImageMultiple from 'vue-material-design-icons/ImageMultiple.vue';
 import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue';
 import History from 'vue-material-design-icons/History.vue';
 import ClockOutline from 'vue-material-design-icons/ClockOutline.vue';
-import VideoPlusOutlineIcon from 'vue-material-design-icons/VideoPlusOutline.vue';
+import VideoPlusOutline from 'vue-material-design-icons/VideoPlusOutline.vue';
 import Delete from 'vue-material-design-icons/Delete.vue';
 
 const props = defineProps({
@@ -57,7 +57,7 @@ if (iconString.value === 'Watch Later') {
 }   
 
 if (iconString.value === 'Add Video') {
-    icon = VideoPlusOutlineIcon
+    icon = VideoPlusOutline
 }   
 
 if (iconString.value === 'Delete Video') {

@@ -67,7 +67,7 @@ let openSideNav = ref(true);
         class = 'h-[100%] fixed z-0 bg-black'
         :class="openSideNav ? 'w-[70px]' : 'w-[240px]' "
         >
-            <ul :class ="[!openSideNav ? 'p-2' : 'px-5 pb-2 pt-[7px]']" class ='mt-[60px] w-full'>
+            <ul :class ="[!openSideNav ? 'flex-row space-x-4' : 'flex-col space-y-1 justify-center']" class ='mt-[60px] w-full'>
                 <SideNavItem :openSideNav='openSideNav' iconString='Home' />
                 <SideNavItem :openSideNav='openSideNav' iconString='Add Video' />
                 <SideNavItem :openSideNav='openSideNav' iconString='Delete Video' />
@@ -79,24 +79,42 @@ let openSideNav = ref(true);
                 <SideNavItem :openSideNav='openSideNav' iconString='Watch Later' />
                 <div v-if ='openSideNav'>
                     <div class="border-b border-b-gray-700 my-2.5"></div>
+                        <div class ='text-gray-400 text-[14px] text-extrabold'>
+                            About Press Copyright
+                            <div>Contact Us</div>
+                            Creator Advertise Developers
+                        </div>
+                    <div class="border-b border-b-gray-700 my-2.5"></div>
+                    <div class ='text-gray-400 text-[14px] text-extrabold'>
+                        Term Privacy Policy & Safety
+                        <div>How YouTube Works</div>
+                        <span>Test new features</span>
+                    </div>
                 </div>
-                <div class ='text-gray-400 text-[14px] text-extrabold'>
-                    About Press Copyright
-                    <div>Contact Us</div>
-                    Creator Advertise Developers
-                </div>
-                <div class="border-b border-b-gray-700 my-2.5"></div>
-                <div class ='text-gray-400 text-[14px] text-extrabold'>
-                   Term Privacy Policy & Safety
-                    <div>How YouTube Works</div>
-                    <span>Test new features</span>
-                </div>
+                
             </ul>
         </div>
+
         <div id='SideNavOverlay'>
+
+        </div>
+
+        <div 
+        class ='w-[100%] h-[calc(100vh-60px)] absolute right-0 top-[60px]'
+        :class = "{
+            'w-[calc(100%-70px)]': !openSideNav,
+            'w-[calc(100%-240px)]': openSideNav,
+        }"
+        >
 
         </div>
        
         <slot/>
     </div>
 </template>
+
+<style>
+    body {
+        background-color: black;
+    }
+</style>
