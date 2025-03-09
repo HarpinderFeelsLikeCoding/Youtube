@@ -1,3 +1,4 @@
+//SideNavItem.vue
 <template>
     <li 
         :class="[!openSideNav ? 'p-2' : 'flex items-center p-2']"
@@ -6,7 +7,7 @@
             <component :is="icon"/>
         </div>
         <div :class="[!openSideNav ? '' : 'mt-1 ml-4']">
-            <span v-if ='openSideNav'>{{ iconString.substring(0,4) }}</span>
+            <span v-if ='!openSideNav'>{{ iconString.substring(0,4) }}</span>
             <span v-else>{{ iconString }}</span>
         </div>
     </li>
@@ -20,7 +21,7 @@ import ImageMultiple from 'vue-material-design-icons/ImageMultiple.vue';
 import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue';
 import History from 'vue-material-design-icons/History.vue';
 import ClockOutline from 'vue-material-design-icons/ClockOutline.vue';
-import VideoPlusOutlineIcon from 'vue-material-design-icons/VideoPlusOutline.vue';
+import VideoPlusOutline from 'vue-material-design-icons/VideoPlusOutline.vue';
 import Delete from 'vue-material-design-icons/Delete.vue';
 
 const props = defineProps({
@@ -57,10 +58,13 @@ if (iconString.value === 'Watch Later') {
 }   
 
 if (iconString.value === 'Add Video') {
-    icon = VideoPlusOutlineIcon
+    icon = VideoPlusOutline
 }   
 
 if (iconString.value === 'Delete Video') {
     icon = Delete      
 }
+
 </script>
+<style lang="scss" scoped>
+</style>
