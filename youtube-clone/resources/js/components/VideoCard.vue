@@ -65,8 +65,16 @@ const { title, user, views, image, videoUrl, thumbnail } = toRefs(props);
 let show = ref(false);
 let showVideo = ref(false);
 let video = ref(null);
+let width = ref(document.documentElement.clientWidth);
+
+onMounted(() => {
+window.addEventListener('resize', () => {
+    width.value= document.documentElement.clientWidth;
+})
+})
 
 watch(() => show.value, (show) => {
+    video.value.play();
     if (show) {
         showVideo.value = true;
         video.value.play();
