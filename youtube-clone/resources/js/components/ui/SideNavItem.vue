@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { ref,defineProps, toRefs } from 'vue';
+import { ref, defineProps, toRefs } from 'vue';
 import Home from 'vue-material-design-icons/Home.vue';
 import FolderPlayOutline from 'vue-material-design-icons/FolderPlayOutline.vue';
 import ImageMultiple from 'vue-material-design-icons/ImageMultiple.vue';
