@@ -1,4 +1,4 @@
-//Video.vue
+//RecommendedVideo.vue
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import NavLayout from '@/layouts/NavLayout.vue';
