@@ -5,7 +5,7 @@ import NavLayout from '@/layouts/NavLayout.vue';
 import CheckCircle from 'vue-material-design-icons/CheckCircle.vue';
 import ThumbUpOutline from 'vue-material-design-icons/ThumbUpOutline.vue';
 import ThumbDownOutline from 'vue-material-design-icons/ThumbDownOutline.vue';
-
+import RecommendedVideos from '@/components/RecommendedVideos.vue';
 
 //defineProps({
 //    canLogin: Boolean,
@@ -71,10 +71,20 @@ import ThumbDownOutline from 'vue-material-design-icons/ThumbDownOutline.vue';
                     </div>
                 </div>
             </div>
-            <div class="w-[500px] p-3 sm:block hidden">
 
+            <div class="w-[500px] p-3 sm:block hidden">
+                <RecommendedVideos 
+                    :vid="{
+                        title: 'A cool video',
+                        video: '/videos/Mountains.mp4',
+                        thumbnail: '/videos/thumbnails/Mountains.png',
+                        user: 'Harpinder Singh',
+                        views: '23k views - 3 days ago',
+                    }"
+                />
             </div>
         </div>
     </NavLayout>
+
 </template>
 
