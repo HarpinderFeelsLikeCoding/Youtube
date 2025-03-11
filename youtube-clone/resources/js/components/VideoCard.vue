@@ -74,7 +74,6 @@ window.addEventListener('resize', () => {
 })
 
 watch(() => show.value, (show) => {
-    video.value.play();
     if (show) {
         showVideo.value = true;
         video.value.play();
