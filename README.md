@@ -7,3 +7,5 @@ reset
 47 (but go backwards to see what is causing the black screen)
 
 50
+
+1:02 
