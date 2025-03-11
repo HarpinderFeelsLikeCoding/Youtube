@@ -3,11 +3,11 @@
 import { defineProps, toRefs, ref, watch } from 'vue';
 import { CheckCircle } from 'vue-material-design-icons/CheckCircle.vue';
 
-const props = defineProps({ vid:Object });
+const props = defineProps({ vid: Object });
 const { vid } = toRefs(props);
 
 let show = ref(false);
-let video=ref(null);
+let video = ref(null);
 
 watch(() => show.value, (show) => {
     if (show) {
@@ -16,18 +16,17 @@ watch(() => show.value, (show) => {
     }
     video.value.pause();
     video.value.currentTime = 0;
-
     });
 
 </script>
 
 <template>
-    <div>
         <div @mouseover="show = true" @mouseleave="show=false">
             <img
                 width="340"
                 class="aspect-video cursor-pointer rounded-lg"
-                :src="show ? 'delay-350 hidden' : ''"
+                :src="vid.thumbnail || ''"
+               :class="show ? 'delay-350 hidden': ''"
                 >
             <div class ='w-full h-full aspect-video cursor-pointer' :class="show ? '' : 'delay-350 hidden'">                
                 <video width="340" ref='video' :src="vid.video || ''" type="video/mp4" />
@@ -43,6 +42,5 @@ watch(() => show.value, (show) => {
                 <div class ='text-sm mb-1 text-gray-300 cursor-pointer'>{{ vid.views }}</div>
             </div>
         </div>
-    </div>
 </template>
 

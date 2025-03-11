@@ -73,15 +73,17 @@ import RecommendedVideos from '@/components/RecommendedVideos.vue';
             </div>
 
             <div class="w-[500px] p-3 sm:block hidden">
-                <RecommendedVideos 
-                    :vid="{
-                        title: 'A cool video',
-                        video: '/videos/Mountains.mp4',
-                        thumbnail: '/videos/thumbnails/Mountains.png',
-                        user: 'Harpinder Singh',
-                        views: '23k views - 3 days ago',
-                    }"
-                />
+                <div class="flex mb-3">
+                    <RecommendedVideos 
+                        :vid="{
+                            title: 'A cool video',
+                            video: '/videos/Mountains.mp4',
+                            thumbnail: '/videos/thumbnails/Mountains.png',
+                            user: 'Harpinder Singh',
+                            views: '23k views - 3 days ago',
+                        }"
+                    />
+                </div>
             </div>
         </div>
     </NavLayout>
