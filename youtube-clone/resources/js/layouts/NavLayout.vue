@@ -39,6 +39,8 @@ const isNavOverlay = () => {
     if (width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value
     if (usePage().url === '/' && width.value < 640) openSideNavOverlay.value = !openSideNavOverlay.value
     if (usePage().props.video) openSideNavOverlay.value = !openSideNavOverlay.value
+    if (usePage().url === '/videos/1') openSideNavOverlay.value = !openSideNavOverlay.value
+
 }
 
 </script>
@@ -197,16 +199,16 @@ const isNavOverlay = () => {
                     YOUTUBE
                 </div>
             </div>
-            <ul class ='mt-[60px] w-full'>
-                <SideNavItem :openSideNav='openSideNav' iconString='Home' />
-                <SideNavItem :openSideNav='openSideNav' iconString='Add Video' />
-                <SideNavItem :openSideNav='openSideNav' iconString='Delete Video' />
+            <ul class ='w-full px-5 py-2 mt-2'>
+                <SideNavItem :openSideNav='true' iconString='Home' />
+                <SideNavItem :openSideNav='true' iconString='Add Video' />
+                <SideNavItem :openSideNav='true' iconString='Delete Video' />
                 <div class="border-b border-b-gray-700 my-2.5"></div>
-                <SideNavItem :openSideNav='openSideNav' iconString='Subscriptions' />
-                <SideNavItem :openSideNav='openSideNav' iconString='Library' />
-                <SideNavItem :openSideNav='openSideNav' iconString='Liked' />
-                <SideNavItem :openSideNav='openSideNav' iconString='History' />
-                <SideNavItem :openSideNav='openSideNav' iconString='Watch Later' />
+                <SideNavItem :openSideNav='true' iconString='Subscriptions' />
+                <SideNavItem :openSideNav='true' iconString='Library' />
+                <SideNavItem :openSideNav='true' iconString='Liked' />
+                <SideNavItem :openSideNav='true' iconString='History' />
+                <SideNavItem :openSideNav='true' iconString='Watch Later' />
                 <div v-if ='openSideNav'>
                     <div class="border-b border-b-gray-700 my-2.5"></div>
                     <div class ='text-gray-400 text-[14px] text-extrabold'>
@@ -232,6 +234,8 @@ const isNavOverlay = () => {
             :class = "{
                 'w-[calc(100%-70px)]': !openSideNav,
                 'w-[calc(100%-240px)]': openSideNav,
+                'w-[100vw] xl:w-[calc(100%-80px)]': $page.url !== '/',
+                'w-[100vw]': width < 639
             }"
         >
             <slot/> 
