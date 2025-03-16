@@ -7,18 +7,25 @@ it!
 
 ## Features
 I made a landing page that displays all the videos in a random order:
+
 Landing Page:
+
 ![Landing Page](Screenshots/LandingPage.png)
 
 I also made a way to add a video:
+
 Add Video Page:
+
 ![Add Video Page](Screenshots/AddVideo.png)
 
 I also made a way to delete a video:
+
 Delete Page:
+
 ![Delete Page](Screenshots/DeleteVideo.png)
 
 A NavBar was also made:
 NavBar:
+
 ![NavBar](Screenshots/NavBar.png)
 
