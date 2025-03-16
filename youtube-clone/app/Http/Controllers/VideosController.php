@@ -7,8 +7,10 @@ use App\Models\Video;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
+
 class VideosController extends Controller
 {
+
     /**
      * Store a newly created resource in storage.
      *

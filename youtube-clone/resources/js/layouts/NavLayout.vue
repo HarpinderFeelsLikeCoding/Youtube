@@ -89,7 +89,7 @@ const isNavOverlay = () => {
                 <img
                     class="rounded-full mx-8"
                     width="35"
-                    src="https://yt3.ggpht.com/e9o-24_frmNSSVvjS47rT8qCHgsHNiedqgXbzmrmpsj6H1ketcufR1B9vLXTZRa30krRksPj=s88-c-k-c0x00ffffff-no-rj-mo"
+                    src="https://media.licdn.com/dms/image/v2/D4E03AQHFFSfMFoA2Tw/profile-displayphoto-shrink_100_100/B4EZTRj2UYHgAU-/0/1738682624749?e=1747872000&v=beta&t=GVsBCg6N8MaPE9taqZAmF6LbXb7dmRkMWUN4N1Og_jM"
                 >
             </div>
         </div>
